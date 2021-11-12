@@ -1,46 +1,61 @@
 // Código del Cuadrado
 
 console.group('Cuadrado');
-const ladoCuadrado = 5;
+
+const ladoCuadrado = parseFloat(prompt('Ingrese el lado'));
 console.log('Los lados del cuadrado miden: ' + ladoCuadrado + 'cm');
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log('El perímetro del cuadrado es: ' + perimetroCuadrado + 'cm');
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log('El área del cuadrado es: ' + areaCuadrado + 'cm^2');
+
+function perimetroCuadrado(lado) {
+    return lado * 4
+}
+console.log('El perímetro del cuadrado es: ' + perimetroCuadrado(ladoCuadrado) + 'cm');
+
+function areaCuadrado(lado) {
+    return lado * lado;
+
+}
+console.log('El área del cuadrado es: ' + areaCuadrado(ladoCuadrado) + 'cm^2');
+
 console.groupEnd();
+
 // Código del Triángulo
+
 console.group('Triángulo');
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-const alturaTriangulo = 5.5;
 
-console.log('La altura del triángulo mide: ' + alturaTriangulo + 'cm');
-console.log('Los lados del triángulo miden: ' + ladoTriangulo1 + 'cm,' + ladoTriangulo2 + 'cm,' + baseTriangulo + 'cm');
+const triangulo = {
+    lado1: parseFloat(prompt('Ingrese el lado 1')),
+    lado2: parseFloat(prompt('Ingrese el lado 2')),
+    base: parseFloat(prompt('Ingrese la base')),
+    altura: parseFloat(prompt('Ingrese la altura'))
+};
+console.log('La altura del triángulo mide: ' + triangulo.altura + 'cm');
+console.log('Los lados del triángulo miden: ' + triangulo.lado1 + 'cm,' + triangulo.lado2 + 'cm,' + triangulo.base + 'cm');
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log('El perímetro del triángulo es: ' + perimetroTriangulo + 'cm');
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-console.log('El área del triángulo es: ' + areaTriangulo + 'cm^2');
+const perimetroTriangulo = (triangulo) => triangulo.lado1 + triangulo.lado2 + triangulo.base;
+console.log('El perímetro del triángulo es: ' + perimetroTriangulo(triangulo) + 'cm');
+
+const areaTriangulo = (triangulo) =>  (triangulo.base * triangulo.altura) / 2;
+console.log('El área del triángulo es: ' + areaTriangulo(triangulo) + 'cm^2');
+
 console.groupEnd();
 
 
 // Código del Círculo
 console.group('Círculo');
 
-const radioCirculo = 4;
+const radioCirculo = parseFloat(prompt('Ingrese el radio'));
 console.log('El radio del Círculo es: ' + radioCirculo + 'cm');
 
-const diametroCirculo = radioCirculo * 2;
-console.log('El diametro del Círculo es: ' + diametroCirculo + 'cm');
+const diametroCirculo =  (radio) => radio * 2;
+console.log('El diametro del Círculo es: ' + diametroCirculo(radioCirculo) + 'cm');
 
 const PI = Math.PI;
 console.log('El valor de PI es: ' + PI);
 
-const perimetroCirculo = diametroCirculo * PI;
-console.log('El perímetro del Círculo es: ' + perimetroCirculo + 'cm');
+const perimetroCirculo = (diametro, pi) => diametro * pi;
+console.log('El perímetro del Círculo es: ' + perimetroCirculo(diametroCirculo(radioCirculo),PI) + 'cm');
 
-const areaCirculo = (radioCirculo * radioCirculo) * PI;
-console.log('El área del Círculo es: ' + areaCirculo + 'cm^2');
+const areaCirculo = (radio, pi) => (radio * radio) * pi;
+console.log('El área del Círculo es: ' + areaCirculo(radioCirculo, PI) + 'cm^2');
 
 console.groupEnd();

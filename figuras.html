@@ -5,10 +5,138 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Figura geométricas | Curso Práctico de Javascript</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Figuras geométricas</h1>
-    <script src="figuras.js"></script>
+<header>
+    <div class="title-container">
+        <h1>
+            Figuras geométricas
+        </h1>
+        <p>Este es el primer taller del curso práctico de JavaScript</p>
+    </div>
+
+</header>
+<main class="main-container">
+
+    <section>
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Square</h3>
+            </div>
+
+            <form>
+                <div class="card-body">
+                    <p>Write how long each side of your square is:</p>
+                    <label for="inputSquare">
+                        Side
+                    </label>
+                    <input class="input" id="inputSquare" type="number" placeholder="0"/>
+                    <div class="button-container">
+                        <button class="primary-button" type="button" onclick="calcularPerimetroCuadrado()">
+                            Get perimeter
+                        </button>
+                        <button class="secondary-button" type="button" onclick="calcularAreaCuadrado()">
+                            Get área
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <div class="card-footer" id="resultSquare">
+                <p class="result"> Area: 81cm2</p>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Triangle</h3>
+            </div>
+
+            <form>
+                <div class="card-body">
+                    <p>Write the length of each side of your triangle:</p>
+                    <label for="sideA">
+                        Side A
+                    </label>
+                    <input class="input" id="sideA" type="number" placeholder="0"/>
+                    <label for="sideB">
+                        Side B
+                    </label>
+                    <input class="input" id="sideB" type="number" placeholder="0"/>
+                    <label for="base">
+                        Base
+                    </label>
+                    <input class="input" id="base" type="number" placeholder="0"/>
+                    <label for="height">
+                        Height
+                    </label>
+                    <input class="input" id="height" type="number" placeholder="0"/>
+                    <div class="button-container">
+                        <button class="primary-button" type="button" onclick="calcularPerimetroTriangulo()">
+                            Get perimeter
+                        </button>
+                        <button class="secondary-button" type="button" onclick="calcularAreaTriangulo()">
+                            Get área
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </form>
+
+            <div class="card-footer" id="resultTriangle">
+                <p class="result"> Area: 81cm2</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Circle</h3>
+            </div>
+
+            <form>
+                <div class="card-body">
+                    <p>Write the length of the radio of your circle::</p>
+                    <label for="radio">
+                        Radio
+                    </label>
+                    <input class="input" id="radio" type="number" placeholder="0"/>
+
+                    <div class="button-container">
+                        <button class="primary-button" type="button" onclick="calcularPerimetroCirculo()">
+                            Get perimeter
+                        </button>
+                        <button class="secondary-button" type="button" onclick="calcularAreaCirculo()">
+                            Get área
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </form>
+
+            <div class="card-footer" id="resultCircle">
+                <p class="result"> Area: 81cm2</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="./figuras.js"></script>
 </body>
 </html>
